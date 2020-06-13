@@ -1,4 +1,5 @@
 Carly's Clippers
+
 You are the Data Analyst at Carly’s Clippers, the newest hair salon on the block.
 Your job is to go through the lists of data that have been collected in the past
 couple of weeks.
