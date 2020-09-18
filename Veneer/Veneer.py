@@ -8,6 +8,7 @@ class Art:
     
   def __repr__(self):
     return "{}. \"{}\". {}, {}. {},{}.".format(self.artist,self.title,self.year,self.medium,self.owner.name,self.owner.location)
+
 class Marketplace:
   def __init__(self):
     self.listings = []
@@ -18,6 +19,7 @@ class Marketplace:
   def show_listings(self):
     for i in self.listings:
       print(i)
+
 class Client:
   def __init__(self,name,location,is_museum):
     self.name = name
@@ -36,6 +38,7 @@ class Client:
       if art_listing != None:
         art_listing.art.owner = self
         veneer.remove_listing(art_listing)
+
 class Listing:
   def __init__(self,art,price,seller):
     self.art = art
@@ -51,10 +54,13 @@ veneer.show_listings()
 
 edytta = Client("Edytta Halpirt","Private Collection",False)
 girl_with_mandolin = Art("Picasso,Pablo","Girl with a Mandolin(Fanny Tellier)","oil on canvas",1910,edytta)
+
 print(girl_with_mandolin)
-moma = Client("The MOMA","New York",True)
+
+HULK = Client("The HULK","New York",True)
 edytta.sell_artwork(girl_with_mandolin,"$6M (USD)")
 veneer.show_listings()
-moma.buy_artwork(girl_with_mandolin)
+
+HULK.buy_artwork(girl_with_mandolin)
 print(girl_with_mandolin)
 veneer.show_listings()
